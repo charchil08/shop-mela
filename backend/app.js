@@ -18,9 +18,4 @@ app.use("/api/v1", userRoutes);
 
 app.use(errorMiddleware);
 
-
-
-
-
-
 module.exports = app;
