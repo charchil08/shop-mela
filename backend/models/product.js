@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
         required: [true, "Product price required"],
         maxLength: [7, "Max 7 digit price"]
     },
-    rating: {
+    ratings: {
         type: Number,
         default: 0,
     },
@@ -49,6 +49,11 @@ const productSchema = new mongoose.Schema({
     },
     reviews: [
         {
+            user: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "User",
+                required: true,
+            },
             name: {
                 type: String,
                 required: [true]
