@@ -62,12 +62,25 @@ userSchema.methods = {
 
     comparePassword: async function (password) {
         const isPasswordMatched = await bcrypt.compare(password, this.password);
-        console.log(isPasswordMatched);
         return isPasswordMatched;
     },
 
+    //Getting password reset token
     getResetPasswordToken: function () {
-        const resetToken = crypto.randomBytes(20)
+
+        // generating token
+        const resetToken = crypto.randomBytes(20).toString('hex');
+
+        // setting resetPasswordToken
+        this.resetPasswordToken = crypto.createHash("sha256")
+            .update(resetToken)
+            .digest("hex");
+
+        // expire time
+        this.resetPasswordExpire = Date.now() + 15 * 60 * 1000;
+
+        //returning only resetToken
+        return resetToken; 
     }
 
 }
