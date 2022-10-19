@@ -58,8 +58,11 @@ const productSchema = new mongoose.Schema({
                 type: String,
                 required: [true]
             },
-            rarting: {
+            rating: {
                 type: Number,
+                min: 1,
+                max: 5,
+                validate: { validator: Number.isInteger },
                 required: true,
             },
             comment: {
