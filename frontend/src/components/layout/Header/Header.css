@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.headerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  font-family: "Roboto", sans-serif;
+  background-color: #dfdfdf;
+}
+
+.headerImage {
+  width: 20vmax;
+  height: 5vmax;
+  justify-self: flex-start;
+}
+
+.menuList {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3vmax;
+}
+
+.menuList .menuItem {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(35, 35, 35, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #fff;
+  transition: all ease-in-out 0.2s;
+}
+.headerMenu a:hover {
+  color: #eb4034;
+  transition: all ease-in-out 0.2s;
+}
+
+.headerMenu .active {
+  padding: 10px 20px;
+  color: rgba(35, 35, 35, 0.8);
+  background-color: rgb(218, 214, 207);
+}
+
+.headerIcons {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.headerIcons span {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 640px) {
+}
