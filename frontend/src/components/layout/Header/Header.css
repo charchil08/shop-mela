@@ -30,8 +30,8 @@ a {
   text-decoration: none;
   color: rgba(35, 35, 35, 0.8);
   padding: 10px 20px;
-  border-radius: 5px;
-  background: #fff;
+  /* border-radius: 5px;
+  background: #fff; */
   transition: all ease-in-out 0.2s;
 }
 .headerMenu a:hover {
@@ -41,7 +41,7 @@ a {
 
 .headerMenu .active {
   padding: 10px 20px;
-  color: rgba(35, 35, 35, 0.8);
+  color: #eb4034;
   background-color: rgb(218, 214, 207);
 }
 

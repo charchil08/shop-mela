@@ -3,7 +3,7 @@ import logo from "../../../assets/images/logo.png"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import { AiOutlineSearch } from "react-icons/ai"
 import { BsPerson } from "react-icons/bs"
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css"
 
 const menu = [
@@ -41,7 +41,7 @@ const Header = () => (
                     menu.map(item => (
                         <li key={item.id} className="menuItem"
                         >
-                            <NavLink to={item.link}>{item.name}</NavLink>
+                            <Link to={item.link}>{item.name}</Link>
                         </li>
                     ))
                 }
